@@ -1,0 +1,24 @@
+{% extends 'wrapper.html' %}
+{% block title %}Grepper{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="m-0 mt-5" align="center">
+
+        <a href="/"> << Home</a>
+    <h3> Terms that need answers</h3>
+        {% for all_term in all_terms %}
+            <div class="card card-body mt-2" style="text-align: start;">
+    
+                {{ all_term.get("term", None) }} 
+                <a href="/answer" style="padding: 3px; background: #eee;color:dark;width:fit-content; text-decoration: none;">Upload Answer</a>
+            </div>
+
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}

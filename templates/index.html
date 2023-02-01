@@ -1,0 +1,23 @@
+{% extends 'wrapper.html' %}
+{% block title %}Grepper{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="m-0 mt-5" align="center">
+    <a class="btn btn-success" href="/search">Search Answers</a>
+    <a href="/need-answers" class="btn btn-primary">Terms that need answers</a>   
+    <!-- <h3> Terms that need answers</h3>
+        {% for all_term in all_terms %}
+            <div class="card p-2 mt-2">
+    
+                {{ all_term.get("term", None) }}
+            </div>
+
+        {% endfor %} -->
+
+    </div>
+</div>
+
+{% endblock %}

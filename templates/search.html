@@ -1,0 +1,131 @@
+{% extends 'wrapper.html' %}
+{% block title %}Grepper Searc h{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row mt-5">
+
+        <div>
+            <h1 class="text-secondary">CodeGrepper Search API</h1>
+            <form action="/getanswers" method="POST">
+                <input type="search" class="p-1" name="search_term" placeholder="Search Terms">
+                <button class="btn  btn-primary " type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+        <div class="row mt-5">
+            <!-- Search Result -->
+            <div  class="card card-body col-md-8">
+                <h3 class="m-1">Search Result</h3>
+                <hr>
+                {% if answers|length < 1%}
+                    <p>No answer</p>
+                {% else %}
+                    {% for answer in answers %}
+                    <code class="card p-2 mt-4 bg-dark text-light">{{ answer['answer'] }}</code>
+                    {% endfor %}
+                {% endif %}
+            </div> 
+            <!-- similar terms -->
+            <div class="card card-body col-md-4">
+                <h3 class="m-1">Similar Terms</h3>
+                {% if sq|length < 1%}
+                {%else%} 
+                     {% for sq in sq %}
+                        <p>
+                            <!-- onclick="sendreq()"  -->
+                           <span id="passTerm"  style="text-decoration: underline;color: blue;cursor: pointer;"> {{ sq['term'] }} </span>
+                        </p>
+                     {% endfor %}
+                {% endif %} 
+                <hr>
+            </div> 
+
+        </div>
+
+</div>
+
+
+<script>
+  
+//   async function sendreq(){
+//         const term = document.getElementById('passTerm').innerText;
+//         await fetch('/getanswers', {
+//             method: 'POST',
+//             headers: { 'Content-Type': 'application/json' },
+//             body: JSON.stringify({
+//                 search_term : term
+//             })
+//         })
+//         .then((res) => res.json())
+//         .then((data) => {
+//             console.log("Data received:", data);
+//         })
+//         .catch(err =>console.log(err))
+//    }
+
+// async function sendreq(){
+//   const term = document.getElementById('passTerm').innerText;
+//   await fetch('/getanswers', {
+//     method: 'POST',
+//     headers: { 'Content-Type': 'application/json' },
+//     body: JSON.stringify({
+//       search_term : term
+//     })
+//   })
+//   .then((res) => {
+//     if (res.status >= 300 && res.status < 400) {
+//       return res.url;
+//     } else {
+//       return res.json();
+//     }
+//   })
+//   .then((data) => {
+//     if (typeof data === 'string') {
+//       window.location.href = data;
+//     } else {
+//       console.log("Data received:", data);
+//     }
+//   })
+//   .catch(err => console.log(err))
+// }
+// async function sendreq(){
+//   const term = document.getElementById('passTerm').innerText;
+//   await fetch('/getanswers', {
+//     method: 'POST',
+//     headers: { 'Content-Type': 'application/json' },
+//     body: JSON.stringify({
+//       search_term : term
+//     })
+//   })
+//   .then((res) => {
+//     if (res.headers.get('Content-Type').includes('application/json')) {
+//       return res.json();
+//     } else {
+//       throw new Error('Not a JSON response');
+//     }
+//   })
+//   .then((data) => {
+//     console.log("Data received:", data);
+//   })
+//   .catch(err => console.log(err))
+// }
+
+// async function sendreq(){
+//         const term = document.getElementById('passTerm').innerText;
+//         const response = await fetch('/getanswers', {
+//             method: 'POST',
+//             headers: { 'Content-Type': 'application/json' },
+//             body: JSON.stringify({
+//                 search_term : term
+//             })
+//         });
+//         const data = await response.json();
+//         console.log("Data received:", data);
+//    }
+</script>
+
+
+{% endblock %}
