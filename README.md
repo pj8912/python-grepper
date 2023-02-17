@@ -5,8 +5,9 @@ using grepper-api with python
 ``` pip install -r requirements.txt ```
 
 ## CodeGrepper API Usage
+
 - [CodeGrepper API Documentation](https://github.com/Code-Grepper/Code-Grepper-API-Documentation/)
-- #### API used
+- #### APIs used
   - [Search Answer](https://github.com/jareer12/Code-Grepper-API-Documentation/blob/main/docs/answers/SEARCHANSWER.MD)
   - [Similar Queries](https://github.com/jareer12/Code-Grepper-API-Documentation/blob/main/docs/answers/SIMILIARQUERIES.MD)
   - [Needed Answers](https://github.com/jareer12/Code-Grepper-API-Documentation/blob/main/docs/answers/NEEDEDANSWERS.MD)
