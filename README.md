@@ -1,8 +1,14 @@
 # python-grepper
-using grepper-api with python
+
+![pygrepper](https://user-images.githubusercontent.com/59218902/220019372-fedcbb24-9534-425a-8545-1d7498d97db0.png)
+
+Using grepper-api with python
 
 ## Install
-``` pip install -r requirements.txt ```
+``` 
+pip install -r requirements.txt 
+
+```
 
 ## CodeGrepper API Usage
 
