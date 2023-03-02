@@ -10,6 +10,9 @@ pip install -r requirements.txt
 
 ```
 
+## Environment
+Create a `.env` file on root folder and add `TOKEN` for token and `USER_ID` for your userid 
+
 ## CodeGrepper API Usage
 
 - [CodeGrepper API Documentation](https://github.com/Code-Grepper/Code-Grepper-API-Documentation/)
