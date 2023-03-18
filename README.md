@@ -35,3 +35,10 @@ Create a `.env` file on root folder and add `TOKEN` for token and `USER_ID` for 
 
 ### Terms that need answers
 ![Screenshot from 2023-02-01 17-57-25](https://user-images.githubusercontent.com/59218902/216042545-4f4c96fb-1d31-4752-b66d-9249e47c42e3.png)
+
+# :heart: Support me by donating
+
+Hi there! If you've found my work helpful or useful in any way, please consider supporting me by donating. Your support helps me continue to create and share useful projects with the community. Thank you for your generosity and support! :handshake:
+
+
+<a href="https://www.buymeacoffee.com/gjohnpinto" target="_blank" align="center"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
